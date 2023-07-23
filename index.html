@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Redirecting...</title>
   <script>
-    const delayTime = 3000;
+    const delayTime = 10000;
     let remainingTime = delayTime;
     function updateTimer() {
       const timerElement = document.getElementById("timer");
@@ -17,16 +17,16 @@
       if (remainingTime > 0) {
         setTimeout(updateTimer, 100);
       } else {
-        redirectToGoogle();
+        redirect();
       }
     }
-    function redirectToGoogle() {
+    function redirect() {
       window.location.replace("https://otoneko1102.github.io/redirect/");
     }
     setTimeout(updateTimer, 100);
   </script>
 </head>
 <body>
-  <h1>Redirecting in <span id="timer">3.0</span> seconds...</h1>
+  <h1>Redirecting in <span id="timer">10.0</span> seconds...</h1>
 </body>
 </html>
