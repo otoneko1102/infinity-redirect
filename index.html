@@ -5,13 +5,28 @@
   <title>Redirecting...</title>
   <script>
     const delayTime = 3000;
+    let remainingTime = delayTime;
+    function updateTimer() {
+      const timerElement = document.getElementById("timer");
+      if (remainingTime >= 100) {
+        remainingTime -= 100;
+      } else {
+        remainingTime = 0;
+      }
+      timerElement.textContent = (remainingTime / 1000).toFixed(1);
+      if (remainingTime > 0) {
+        setTimeout(updateTimer, 100);
+      } else {
+        redirectToGoogle();
+      }
+    }
     function redirectToGoogle() {
       window.location.replace("https://otoneko1102.github.io/redirect/");
     }
-    setTimeout(redirectToGoogle, delayTime);
+    setTimeout(updateTimer, 100);
   </script>
 </head>
 <body>
-  <h1>Redirecting...</h1>
+  <h1>Redirecting in <span id="timer">3.0</span> seconds...</h1>
 </body>
 </html>
