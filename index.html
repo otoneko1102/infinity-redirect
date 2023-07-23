@@ -6,6 +6,7 @@
   <script>
     const delayTime = 10000;
     let remainingTime = delayTime;
+
     function updateTimer() {
       const timerElement = document.getElementById("timer");
       if (remainingTime >= 100) {
@@ -20,9 +21,11 @@
         redirect();
       }
     }
+
     function redirect() {
-      window.location.replace("https://otoneko1102.github.io/infinity-redirect/");
+      window.location.replace(window.location.href);
     }
+
     setTimeout(updateTimer, 100);
   </script>
 </head>
