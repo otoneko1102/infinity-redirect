@@ -2,12 +2,16 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>リダイレクト中...</title>
+  <title>Redirecting...</title>
   <script>
-    window.location.replace("https://www.google.com");
+    const delayTime = 3000;
+    function redirectToGoogle() {
+      window.location.replace("https://www.google.com");
+    }
+    setTimeout(redirectToGoogle, delayTime);
   </script>
 </head>
 <body>
-  <p>リダイレクトしています...</p>
+  <h1>Redirecting...</h1>
 </body>
 </html>
