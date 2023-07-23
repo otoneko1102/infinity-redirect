@@ -1,2 +1,2 @@
-# redirect
-Test. https://otoneko1102.github.io/redirect/
+# infinity-redirect
+https://otoneko1102.github.io/infinity-redirect/
